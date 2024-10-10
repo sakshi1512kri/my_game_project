@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #89fffd, #ef32d9);
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+    /* Maximum width for larger screens */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.player-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background: #ef32d9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+    /* Added margin for spacing */
+}
+
+button:hover {
+    background: #89fffd;
+    color: #000;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background: #ef32d9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #89fffd;
+    color: #000;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-score {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    /* Ensuring the board takes full width */
+    max-width: 360px;
+    /* Setting a max-width for the game board */
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    height: 100px;
+    /* Fixed height for cells */
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.cell.disabled {
+    cursor: not-allowed;
+    background-color: #ddd;
+}
+
+.result-message {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hurray Emoji Animation */
+.hurray {
+    position: absolute;
+    top: 20px;
+    /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.hurray.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}

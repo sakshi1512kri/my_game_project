@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Tic Tac Toe</h1>
+
+        <!-- Player Input Section -->
+        <div class="player-input">
+            <div class="player">
+                <label for="player1">Player 1 Name:</label>
+                <input type="text" id="player1" placeholder="Player 1" />
+            </div>
+            <div class="player">
+                <label for="player2">Player 2 Name:</label>
+                <input type="text" id="player2" placeholder="Player 2" />
+            </div>
+            <button id="startGame">Start Game</button>
+        </div>
+
+        <!-- Scoreboard Section -->
+        <div class="scoreboard">
+            <div class="player-score">
+                <p id="player1Name">Player 1: <span id="player1Score">0</span></p>
+            </div>
+            <div class="player-score">
+                <p id="player2Name">Player 2: <span id="player2Score">0</span></p>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div id="resultMessage" class="result-message"></div>
+        <!-- Hurray Emoji -->
+        <div id="hurray" class="hurray"></div>
+
+        <!-- New Game and Continue Buttons -->
+        <div class="buttons">
+            <button id="continueGame" style="display:none;">Continue</button>
+            <button id="newGame" style="display:none;">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
