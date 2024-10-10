@@ -1,6 +1,8 @@
 # Use the official Nginx image
 FROM nginx:alpine
 
+WORKDIR /usr/share/nginx/html
+
 # Copy the HTML and CSS files to the Nginx web root
 COPY index.html /usr/share/nginx/html/
 COPY style.css /usr/share/nginx/html/
